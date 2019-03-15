@@ -37,4 +37,7 @@ public enum VersionRule {
         return versionRuleValidator.allows(deploymentType);
     }
 
+    VersionRule value(String caseInsensitiveValue) {
+        return VersionRule.valueOf(caseInsensitiveValue.toUpperCase());
+    }
 }
